@@ -1,0 +1,35 @@
+:root {
+    /* Шрифты */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+    /* Цвета: глубокий графитовый/синий (премиум минимализм) */
+    --bg-base: #0A0A10;
+    --bg-card: rgba(255, 255, 255, 0.03);
+    --bg-card-hover: rgba(255, 255, 255, 0.06);
+
+    --text-primary: #F4F5F7;
+    --text-secondary: #9CA3AF;
+    --text-dim: #4B5563;
+
+    --border-color: rgba(255, 255, 255, 0.08);
+
+    /* Акценты */
+    --accent-1: #8B5CF6;
+    --accent-2: #7C8CFF;
+    --accent-3: #38E0D0;
+    --gradient-main: linear-gradient(120deg, var(--accent-1) 0%, var(--accent-2) 45%, var(--accent-3) 100%);
+
+    /* Размеры */
+    --container-width: 1200px;
+    --header-height: 80px;
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+
+
+    /* ... существующие переменные ... */
+    --bg-section-alt: #0D0D14;
+    /* Чуть светлее основного фона */
+
+}
