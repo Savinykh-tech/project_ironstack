@@ -3,26 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>IronStack</title>
+    <title>Автоматизация бизнеса — IronStack</title>
+    <meta
+      name="description"
+      content="Telegram-боты, парсеры, интеграции с 1С и CRM. Автоматизирую рутинные процессы, которые съедают время ваших сотрудников. Чистый код, серверы в РФ."
+    />
+    <meta name="theme-color" content="#0A0A10" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://savinykh-tech.ru/automation.html"
+    />
+    <meta property="og:title" content="Автоматизация бизнеса — IronStack" />
+    <meta
+      property="og:description"
+      content="Заменяю ручной труд и дорогие CRM на простые и надёжные системы. Telegram-боты, парсеры, интеграции."
+    />
+    <meta property="og:image" content="https://savinykh-tech.ru/og.jpg" />
+    <meta property="og:site_name" content="IronStack" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "IronStack — Автоматизация бизнеса",
+        "description": "Разработка Telegram-ботов, парсеров данных и интеграций с 1С, CRM и другими системами.",
+        "url": "https://savinykh-tech.ru/automation.html",
+        "serviceType": "Business Automation",
+        "areaServed": "RU"
+      }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/cosmos.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/automation.css" />
+
   </head>
   <body>
     <canvas id="cosmos-canvas" aria-hidden="true"></canvas>
 
     <header class="header">
       <div class="container header__inner">
-        <a href="/" class="header__logo"
-          ><span class="header__logo-icon"></span>IronStack</a
-        >
+        <a href="/" class="header__logo">
+          <span class="header__logo-icon"></span>
+          IronStack
+        </a>
+ 
         <nav class="header__nav">
           <ul class="header__list">
             <li class="header__dropdown">
-              <a href="#" class="header__link">Услуги ▾</a>
+              <a href="#" class="header__link">Услуги </a>
               <ul class="header__dropdown-menu">
                 <li>
                   <a href="web-dev.html" class="header__dropdown-link"
@@ -30,43 +68,329 @@
                   >
                 </li>
                 <li>
-                  <a href="automation.html" class="header__dropdown-link"
+                  <a
+                    href="automation.html"
+                    class="header__dropdown-link header__link--active"
                     >Автоматизация бизнеса</a
                   >
                 </li>
               </ul>
             </li>
+            <li><a href="about.html" class="header__link">Обо мне</a></li>
+        
+            <li><a href="journal.html" class="header__link">Статьи</a></li>
             <li><a href="pricing.html" class="header__link">Цены</a></li>
-            <li><a href="journal.html" class="header__link">Техжурнал</a></li>
+            <li><a href="/#contact" class="header__link">Контакты</a></li>
           </ul>
-          <a href="#contact" class="header__cta">Обсудить проект</a>
+          <a href="/#contact" class="header__cta">Обсудить проект</a>
         </nav>
       </div>
     </header>
 
-    <main
-      class="container"
-      style="
-        padding-top: 160px;
-        min-height: 80vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      "
-    >
-      <h1 class="grad-text" style="font-size: 48px">
-        Страница в разработке 🚧
-      </h1>
+    <main class="automation-page">
+      <!-- Hero -->
+      <section class="automation-hero">
+        <div class="container">
+          <h1>Автоматизация, которая<br />заменяет целый отдел</h1>
+          <p class="automation-hero__text">
+            Telegram-боты, парсеры, интеграции с 1С и CRM. Я создаю системы,
+            которые забирают на себя рутину ваших сотрудников — приём заявок,
+            обработку заказов, сбор данных. Вы платите один раз, система
+            работает годами.
+          </p>
+          <div class="automation-hero__stats">
+            <div class="stat-item">
+              <span class="stat-item__number">0 ₽</span>
+              <span class="stat-item__label">абонентской платы за CRM</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__number">24/7</span>
+              <span class="stat-item__label">работает без выходных</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__number">1 клик</span>
+              <span class="stat-item__label">управление заявками</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Case: Огонь & Мясо -->
+      <section class="automation-section">
+        <div class="container">
+          <div class="case-hero">
+            <div class="case-hero__preview">
+              <div class="case-hero__placeholder">savinykh-tech.ru/pizza</div>
+            </div>
+            <div class="case-hero__content">
+              <span class="case-hero__tag">Реальный кейс</span>
+              <h2>«Огонь & Мясо» — полная замена CRM</h2>
+              <p class="case-hero__category">
+                FoodTech · Автоматизация приёма заказов
+              </p>
+              <p class="case-hero__desc">
+                Владелец пиццерии платил 5 000 ₽/мес за облачную CRM и всё равно
+                терял заявки в чатах. Я сделал систему, где клиент заказывает с
+                сайта, менеджер получает уведомление в Telegram и управляет
+                статусами в один клик. Если заказ игнорируется — автоматическая
+                эскалация директору. Меню на сайте полностью обновляется
+                загрузкой одного CSV-файла из 1С прямо в бота.
+              </p>
+              <div class="case-hero__features">
+                <div class="case-feature">
+                  <span class="case-feature__icon">🤖</span>
+                  <span>Telegram-бот для менеджера</span>
+                </div>
+                <div class="case-feature">
+                  <span class="case-feature__icon">🔄</span>
+                  <span>Парсинг CSV из 1С</span>
+                </div>
+                <div class="case-feature">
+                  <span class="case-feature__icon">⚡</span>
+                  <span>Эскалация руководителю</span>
+                </div>
+                <div class="case-feature">
+                  <span class="case-feature__icon">🔒</span>
+                  <span>Сервер в РФ, 152-ФЗ</span>
+                </div>
+              </div>
+              <div class="case-hero__stack">
+                <span>Python</span>
+                <span>Telegram Bot API</span>
+                <span>CSV Parser</span>
+                <span>HTML/CSS/JS</span>
+              </div>
+              <a
+                href="https://savinykh-tech.ru/pizza/"
+                target="_blank"
+                class="case-hero__link"
+                >Смотреть демо →</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What we automate -->
+      <section class="automation-section section--alt">
+        <div class="container">
+          <h2 class="section-title">Что я автоматизирую</h2>
+          <p class="section-subtitle">
+            Не берусь за всё подряд. Работаю только с теми задачами, где
+            автоматизация даёт измеримый результат — экономит часы или деньги.
+          </p>
+          <div class="automation-grid">
+            <article class="automation-card">
+              <h3>Telegram-боты</h3>
+              <p>
+                Приём заявок, управление заказами, уведомления сотрудников,
+                роутинг обращений. Работает там, где ваши клиенты и сотрудники
+                уже есть.
+              </p>
+            </article>
+            <article class="automation-card">
+              <h3>Парсеры данных</h3>
+              <p>
+                Сбор цен конкурентов, мониторинг изменений на сайтах, агрегация
+                данных из открытых источников в удобные таблицы или базы данных.
+              </p>
+            </article>
+            <article class="automation-card">
+              <h3>Интеграции с 1С</h3>
+              <p>
+                Выгрузка номенклатуры, цен, остатков через CSV или API.
+                Синхронизация между сайтом и учётной системой без ручного ввода.
+              </p>
+            </article>
+            <article class="automation-card">
+              <h3>CRM и вебхуки</h3>
+              <p>
+                Связка сайта с amoCRM, Bitrix24, МойСклад или кастомными
+                системами. Настройка n8n для сложных сценариев автоматизации.
+              </p>
+            </article>
+            <article class="automation-card">
+              <h3>Личные кабинеты</h3>
+              <p>
+                Системы для клиентов или сотрудников с авторизацией, историей
+                заказов, статистикой. Лёгкие веб-приложения без раздутого
+                функционала.
+              </p>
+            </article>
+            <article class="automation-card">
+              <h3>Скрипты и утилиты</h3>
+              <p>
+                Автоматизация рутины: генерация отчётов, обработка файлов,
+                массовые рассылки, резервное копирование. Всё, что занимает часы
+                ручной работы.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section class="automation-section">
+        <div class="container">
+          <h2 class="section-title">Как проходит работа</h2>
+          <div class="process-timeline">
+            <div class="process-step">
+              <div class="process-step__dot"></div>
+              <div class="process-step__content">
+                <h3>Разбор задачи</h3>
+                <p>
+                  Созваниваемся и я задаю вопросы: что сейчас делается вручную,
+                  сколько времени это занимает, какие системы уже используются.
+                  Часто оказывается, что половина автоматизации не нужна вообще.
+                </p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step__dot"></div>
+              <div class="process-step__content">
+                <h3>Техническое решение</h3>
+                <p>
+                  Предлагаю архитектуру: какой стек использовать, где хранить
+                  данные, как обеспечить безопасность. Объясняю простым языком,
+                  без технического жаргона.
+                </p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step__dot"></div>
+              <div class="process-step__content">
+                <h3>Прототип и смета</h3>
+                <p>
+                  Делаю рабочий прототип ключевой функции (например, бот
+                  принимает одно сообщение и отправляет уведомление). Фиксируем
+                  точную стоимость и сроки.
+                </p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step__dot"></div>
+              <div class="process-step__content">
+                <h3>Разработка и тестирование</h3>
+                <p>
+                  Пишу код, покрываю ключевые сценарии тестами. Выкладываю на
+                  тестовый сервер — вы видите прогресс в реальном времени, а не
+                  ждёте месяц в темноте.
+                </p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step__dot"></div>
+              <div class="process-step__content">
+                <h3>Запуск и передача</h3>
+                <p>
+                  Разворачиваю систему на вашем сервере или VPS. Настраиваю
+                  мониторинг, передаю документацию и доступы. Первые 2 недели —
+                  бесплатная поддержка.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Principles -->
+      <section class="automation-section section--alt">
+        <div class="container">
+          <h2 class="section-title">Принципы работы с автоматизацией</h2>
+          <div class="principles-grid">
+            <article class="principle-card">
+              <p>
+                Я не навязываю сложные решения там, где хватит простого скрипта.
+                Если задачу можно решить макросом в Excel за вечер — я так и
+                скажу, а не буду продавать бота за 50 тысяч.
+              </p>
+            </article>
+            <article class="principle-card">
+              <p>
+                Все данные хранятся на серверах в РФ. Это требование 152-ФЗ и
+                здравый смысл. Никаких зарубежных облаков для персональных
+                данных ваших клиентов.
+              </p>
+            </article>
+            <article class="principle-card">
+              <p>
+                Код пишется так, чтобы его мог поддержать другой разработчик.
+                Чистая структура, комментарии, документация API. Вы не
+                оказываетесь в заложниках у одного специалиста.
+              </p>
+            </article>
+            <article class="principle-card">
+              <p>
+                Автоматизация должна окупаться. Перед началом работы я считаю,
+                сколько часов/денег сэкономит система. Если выгода неочевидна —
+                честно об этом говорю.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="automation-cta section--alt">
+        <div class="container">
+          <h2>Расскажите о вашей задаче</h2>
+          <p>
+            Опишите процесс, который хотите автоматизировать. Я оценю сложность,
+            предложу решение и назову точную стоимость в течение 24 часов.
+          </p>
+          <a href="/#contact" class="hero__cta">Оставить заявку</a>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
       <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <div class="header__logo">
+              <span class="header__logo-icon"></span>
+              IronStack
+            </div>
+            <p>
+              Инженерный подход к веб-разработке. Чистый код, архитектура,
+              результат.
+            </p>
+          </div>
+          <div class="footer__cols">
+            <div class="footer__col">
+              <h4>Компания</h4>
+              <a href="about.html">Обо мне</a>
+              <a href="pricing.html">Цены</a>
+              <a href="journal.html">Статьи</a>
+            </div>
+            <div class="footer__col">
+              <h4>Связь</h4>
+              <a href="mailto:hello@savinykh-tech.ru">hello@savinykh-tech.ru</a>
+              <a href="https://t.me/your_telegram_username" target="_blank"
+                >Telegram</a
+              >
+              <a href="https://web.max.ru/your_max_username" target="_blank"
+                >Max</a
+              >
+              <a href="https://github.com/your_github" target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
         <div class="footer__bottom">
-          <span>© 2026 IronStack</span>
+          <span>© 2026 IronStack · Самозанятый Савиных Р.А. · ИНН XXX</span>
+          <span>
+            <a href="privacy-policy.html">Политика конфиденциальности</a> ·
+            <a href="oferta.html">Оферта</a> ·
+            <a href="pd-consent.html">Согласие на обработку ПД</a>
+          </span>
         </div>
       </div>
     </footer>
 
     <script src="js/cosmos.js" defer></script>
+    <script src="js/cookie-banner.js" defer></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>

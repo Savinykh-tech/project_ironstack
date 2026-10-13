@@ -3,22 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>IronStack</title>
+    <title>Статьи и новости IT — IronStack</title>
+    <meta
+      name="description"
+      content="Блог о веб-разработке, автоматизации бизнеса и технологиях. Разборы новостей, кейсы, полезные советы."
+    />
+    <meta name="theme-color" content="#0A0A10" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://savinykh-tech.ru/journal.html" />
+    <meta property="og:title" content="Статьи — IronStack" />
+    <meta
+      property="og:description"
+      content="Разборы новостей IT, кейсы автоматизации, советы по разработке."
+    />
+    <meta property="og:image" content="https://savinykh-tech.ru/og.jpg" />
+    <meta property="og:site_name" content="IronStack" />
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/cosmos.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/journal.css" />
+
   </head>
   <body>
     <canvas id="cosmos-canvas" aria-hidden="true"></canvas>
 
     <header class="header">
       <div class="container header__inner">
-        <a href="/" class="header__logo"
-          ><span class="header__logo-icon"></span>IronStack</a
-        >
+        <a href="/" class="header__logo">
+          <span class="header__logo-icon"></span>
+          IronStack
+        </a>
+   
         <nav class="header__nav">
           <ul class="header__list">
             <li class="header__dropdown">
@@ -36,37 +58,197 @@
                 </li>
               </ul>
             </li>
+            <li><a href="about.html" class="header__link">Обо мне</a></li>
+          
+            <li>
+              <a href="journal.html" class="header__link header__link--active"
+                >Статьи</a
+              >
+            </li>
             <li><a href="pricing.html" class="header__link">Цены</a></li>
-            <li><a href="journal.html" class="header__link">Техжурнал</a></li>
+            <li><a href="/#contact" class="header__link">Контакты</a></li>
           </ul>
-          <a href="#contact" class="header__cta">Обсудить проект</a>
+          <a href="/#contact" class="header__cta">Обсудить проект</a>
         </nav>
       </div>
     </header>
 
-    <main
-      class="container"
-      style="
-        padding-top: 160px;
-        min-height: 80vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      "
-    >
-      <h1 class="grad-text" style="font-size: 48px">
-        Страница в разработке 🚧
-      </h1>
+    <main class="journal-page">
+      <!-- Hero -->
+      <section class="journal-hero">
+        <div class="container">
+          <h1>Блог о разработке и автоматизации</h1>
+          <p class="journal-hero__text">
+            Разбираю новости IT, делюсь кейсами из практики и пишу о том, как
+            технологии могут упростить бизнес. Без воды, только по делу.
+          </p>
+        </div>
+      </section>
+
+      <!-- Articles Grid -->
+      <section class="journal-section">
+        <div class="container">
+          <div class="articles-grid">
+            <!-- Article 1 -->
+            <article class="article-card">
+              <div class="article-card__preview">
+                <div class="article-card__placeholder">📰</div>
+              </div>
+              <div class="article-card__content">
+                <div class="article-card__meta">
+                  <span class="article-card__category">Разбор</span>
+                  <span class="article-card__date">12 октября 2026</span>
+                </div>
+                <h3 class="article-card__title">
+                  Почему чистый код важнее скорости разработки
+                </h3>
+                <p class="article-card__excerpt">
+                  Разбираю, почему сайты на конструкторах проигрывают в
+                  долгосрочной перспективе, и как чистый код экономит деньги
+                  через год после запуска.
+                </p>
+                <div class="article-card__footer">
+                  <span class="article-card__read-time">5 мин чтения</span>
+                  <a href="#" class="article-card__link">Читать →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="article-card">
+              <div class="article-card__preview">
+                <div class="article-card__placeholder">🤖</div>
+              </div>
+              <div class="article-card__content">
+                <div class="article-card__meta">
+                  <span class="article-card__category">Кейс</span>
+                  <span class="article-card__date">5 октября 2026</span>
+                </div>
+                <h3 class="article-card__title">
+                  Как я заменил CRM за 5000₽/мес на Telegram-бота
+                </h3>
+                <p class="article-card__excerpt">
+                  История автоматизации для пиццерии: приём заказов, эскалация
+                  руководителю, загрузка меню из 1С. Разбор архитектуры и
+                  экономии.
+                </p>
+                <div class="article-card__footer">
+                  <span class="article-card__read-time">8 мин чтения</span>
+                  <a href="#" class="article-card__link">Читать →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="article-card">
+              <div class="article-card__preview">
+                <div class="article-card__placeholder">🔒</div>
+              </div>
+              <div class="article-card__content">
+                <div class="article-card__meta">
+                  <span class="article-card__category">Закон</span>
+                  <span class="article-card__date">28 сентября 2026</span>
+                </div>
+                <h3 class="article-card__title">
+                  152-ФЗ для разработчиков: что нужно знать
+                </h3>
+                <p class="article-card__excerpt">
+                  Разбираю требования закона о персональных данных: чекбоксы,
+                  политика конфиденциальности, серверы в РФ. Как не получить
+                  штраф от Роскомнадзора.
+                </p>
+                <div class="article-card__footer">
+                  <span class="article-card__read-time">6 мин чтения</span>
+                  <a href="#" class="article-card__link">Читать →</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="article-card">
+              <div class="article-card__preview">
+                <div class="article-card__placeholder">⚡</div>
+              </div>
+              <div class="article-card__content">
+                <div class="article-card__meta">
+                  <span class="article-card__category">Новости</span>
+                  <span class="article-card__date">20 сентября 2026</span>
+                </div>
+                <h3 class="article-card__title">
+                  Новые штрафы за отсутствие согласия на обработку ПД
+                </h3>
+                <p class="article-card__excerpt">
+                  С октября 2026 года штрафы за нарушения 152-ФЗ выросли до 700
+                  000 рублей. Разбираю, что изменилось и как защитить свой сайт.
+                </p>
+                <div class="article-card__footer">
+                  <span class="article-card__read-time">4 мин чтения</span>
+                  <a href="#" class="article-card__link">Читать →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Empty state (пока статей мало) -->
+          <div class="journal-empty">
+            <p>
+              Новые статьи публикуются регулярно. Подпишитесь на обновления,
+              чтобы не пропустить.
+            </p>
+            <a href="/#contact" class="hero__cta">Оставить заявку</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
       <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <div class="header__logo">
+              <span class="header__logo-icon"></span>
+              IronStack
+            </div>
+            <p>
+              Инженерный подход к веб-разработке. Чистый код, архитектура,
+              результат.
+            </p>
+          </div>
+          <div class="footer__cols">
+            <div class="footer__col">
+              <h4>Компания</h4>
+              <a href="about.html">Обо мне</a>
+              <a href="pricing.html">Цены</a>
+              <a href="journal.html">Статьи</a>
+            </div>
+            <div class="footer__col">
+              <h4>Связь</h4>
+              <a href="mailto:hello@savinykh-tech.ru">hello@savinykh-tech.ru</a>
+              <a href="https://t.me/your_telegram_username" target="_blank"
+                >Telegram</a
+              >
+              <a href="https://web.max.ru/your_max_username" target="_blank"
+                >Max</a
+              >
+              <a href="https://github.com/your_github" target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
         <div class="footer__bottom">
-          <span>© 2026 IronStack</span>
+          <span>© 2026 IronStack · Самозанятый Савиных Р.А. · ИНН XXX</span>
+          <span>
+            <a href="privacy-policy.html">Политика конфиденциальности</a> ·
+            <a href="oferta.html">Оферта</a> ·
+            <a href="pd-consent.html">Согласие на обработку ПД</a>
+          </span>
         </div>
       </div>
     </footer>
 
     <script src="js/cosmos.js" defer></script>
+    <script src="js/cookie-banner.js" defer></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>

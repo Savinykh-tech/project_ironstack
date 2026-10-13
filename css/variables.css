@@ -7,6 +7,7 @@
     --bg-base: #0A0A10;
     --bg-card: rgba(255, 255, 255, 0.03);
     --bg-card-hover: rgba(255, 255, 255, 0.06);
+    --bg-section-alt: #0D0D14;
 
     --text-primary: #F4F5F7;
     --text-secondary: #9CA3AF;
@@ -26,10 +27,4 @@
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
-
-
-    /* ... существующие переменные ... */
-    --bg-section-alt: #0D0D14;
-    /* Чуть светлее основного фона */
-
 }

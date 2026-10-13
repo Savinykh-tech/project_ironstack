@@ -3,29 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>IronStack</title>
+    <title>Разработка сайтов под ключ — IronStack</title>
+    <meta
+      name="description"
+      content="Создание сайтов на чистом коде без конструкторов. Лендинги, корпоративные сайты, интернет-магазины. Скорость 100/100, SEO-оптимизация, полная передача прав."
+    />
+    <meta name="theme-color" content="#0A0A10" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://savinykh-tech.ru/web-dev.html" />
+    <meta
+      property="og:title"
+      content="Разработка сайтов под ключ — IronStack"
+    />
+    <meta
+      property="og:description"
+      content="Чистый код, архитектура, результат. Работаю напрямую, без посредников."
+    />
+    <meta property="og:image" content="https://savinykh-tech.ru/og.jpg" />
+    <meta property="og:site_name" content="IronStack" />
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/cosmos.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/web-dev.css" />
+
   </head>
   <body>
     <canvas id="cosmos-canvas" aria-hidden="true"></canvas>
 
     <header class="header">
       <div class="container header__inner">
-        <a href="/" class="header__logo"
-          ><span class="header__logo-icon"></span>IronStack</a
-        >
+        <a href="/" class="header__logo">
+          <span class="header__logo-icon"></span>
+          IronStack
+        </a>
         <nav class="header__nav">
           <ul class="header__list">
             <li class="header__dropdown">
               <a href="#" class="header__link">Услуги ▾</a>
               <ul class="header__dropdown-menu">
                 <li>
-                  <a href="web-dev.html" class="header__dropdown-link"
+                  <a
+                    href="web-dev.html"
+                    class="header__dropdown-link header__link--active"
                     >Сайты под ключ</a
                   >
                 </li>
@@ -36,37 +62,315 @@
                 </li>
               </ul>
             </li>
+            <li><a href="about.html" class="header__link">Обо мне</a></li>
+            
+            <li><a href="journal.html" class="header__link">Статьи</a></li>
             <li><a href="pricing.html" class="header__link">Цены</a></li>
-            <li><a href="journal.html" class="header__link">Техжурнал</a></li>
+            <li><a href="/#contact" class="header__link">Контакты</a></li>
           </ul>
-          <a href="#contact" class="header__cta">Обсудить проект</a>
+          <a href="/#contact" class="header__cta">Обсудить проект</a>
         </nav>
       </div>
     </header>
 
-    <main
-      class="container"
-      style="
-        padding-top: 160px;
-        min-height: 80vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      "
-    >
-      <h1 class="grad-text" style="font-size: 48px">
-        Страница в разработке 🚧
-      </h1>
+    <main class="webdev-page">
+      <!-- Hero -->
+      <section class="webdev-hero">
+        <div class="container">
+          <h1>Сайты, которые работают<br />на вас, а не на конструктор</h1>
+          <p class="webdev-hero__text">
+            Я не собираю сайты на готовых шаблонах. Я пишу их с нуля на чистом
+            коде. Это значит, что ваш сайт будет летать, поисковики будут его
+            любить, а вы не будете платить ежемесячную дань платформам вроде
+            Tilda.
+          </p>
+          <div class="webdev-hero__actions">
+            <a href="/#contact" class="hero__cta">Рассчитать стоимость</a>
+            <a href="pricing.html" class="webdev-hero__link"
+              >Посмотреть цены →</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Tilda vs Custom Code -->
+      <section class="webdev-section">
+        <div class="container">
+          <h2 class="section-title">Почему чистый код, а не конструктор?</h2>
+          <div class="comparison-grid">
+            <article class="compare-card compare-card--bad">
+              <h3>Конструкторы (Tilda, Wix)</h3>
+              <ul class="compare-list">
+                <li>Ежемесячная подписка (от 750 до 2000 ₽/мес)</li>
+                <li>Медленная загрузка (тяжёлый код платформы)</li>
+                <li>Ограниченный дизайн (шаблоны узнаваемы)</li>
+                <li>Сайт принадлежит платформе, а не вам</li>
+                <li>Сложно масштабировать и интегрировать</li>
+              </ul>
+            </article>
+            <article class="compare-card compare-card--good">
+              <h3>Разработка на IronStack</h3>
+              <ul class="compare-list">
+                <li>Оплата один раз, никаких абонентских плат</li>
+                <li>Скорость загрузки 100/100 по PageSpeed</li>
+                <li>Уникальный дизайн под ваш бренд</li>
+                <li>Полное владение кодом и хостингом</li>
+                <li>Любые интеграции и масштабирование</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Study: Братья 65 -->
+      <section class="webdev-section section--alt">
+        <div class="container">
+          <div class="case-study">
+            <div class="case-study__header">
+              <span class="case-study__tag"
+                >Разберем принцип нашей работы на примере</span
+              >
+              <h2>«Братья 65» — Промышленный альпинизм</h2>
+              <p class="case-study__subtitle">
+                Многостраничный корпоративный сайт · 15+ страниц ·
+                Южно-Сахалинск
+              </p>
+            </div>
+
+            <div class="case-study__grid">
+              <!-- Задача -->
+              <div class="case-block">
+                <h3>🎯 Задача клиента</h3>
+                <p>
+                  Компании нужен был не просто «сайт-визитка», а полноценный
+                  инструмент продаж для сложной B2B-услуги. Клиенты должны были
+                  понимать, что именно делают альпинисты, видеть цены и
+                  оставлять заявки. При этом интернет на Сахалине не всегда
+                  быстрый — сайт должен был работать даже на слабом соединении.
+                </p>
+              </div>
+
+              <!-- Решение -->
+              <div class="case-block">
+                <h3>✅ Что мы сделали</h3>
+                <p>
+                  Разработали структуру из 15+ страниц: главная, каталог услуг с
+                  детальным описанием каждой работы, интерактивный калькулятор
+                  стоимости (клиент сам считает цену), защищённая форма заявки с
+                  отправкой в Telegram. Всё это загружается за 1-2 секунды даже
+                  на 3G.
+                </p>
+              </div>
+
+              <!-- Технические детали -->
+              <div class="case-block">
+                <h3>⚙️ Технические детали</h3>
+                <p>
+                  Сайт написан на чистом HTML/CSS/JavaScript — никаких тяжёлых
+                  конструкторов вроде Tilda или WordPress. Это значит, что код
+                  весит в 10 раз меньше, чем у аналогов. Развернули на
+                  собственном сервере клиента (Docker + Caddy), настроили HTTPS
+                  и резервное копирование.
+                </p>
+              </div>
+
+              <!-- Юридическая чистота -->
+              <div class="case-block">
+                <h3>Юридическая чистота</h3>
+                <p>
+                  Добавили политику конфиденциальности, чекбоксы согласия на
+                  обработку персональных данных, ссылки на публичную оферту.
+                  Сервер физически находится в России — полное соответствие
+                  152-ФЗ. Клиент защищён от штрафов Роскомнадзора.
+                </p>
+              </div>
+
+              <!-- Почему другие так не делают -->
+              <div class="case-block case-block--highlight">
+                <h3>💡 Почему другие так не делают?</h3>
+                <p>
+                  Большинство студий собирают сайты на конструкторах — это
+                  быстрее для них, но хуже для клиента: медленная загрузка,
+                  ежемесячная подписка (от 750 до 2000 ₽/мес), ограниченный
+                  функционал. Мы пишем код с нуля — это дольше, но вы получаете
+                  быстрый, независимый сайт без абонентской платы.
+                </p>
+              </div>
+
+              <!-- Результат -->
+              <div class="case-block">
+                <h3>Результат</h3>
+                <p>
+                  Сайт запущен, клиент получает заявки через Telegram.
+                  Калькулятор стоимости снижает нагрузку на менеджеров — клиенты
+                  сами считают цену. Google и Яндекс индексируют сайт без
+                  проблем благодаря чистой семантике и скорости загрузки.
+                </p>
+              </div>
+            </div>
+
+            <div class="case-study__footer">
+              <div class="case-study__stack">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Vanilla JS</span>
+                <span>Docker</span>
+                <span>Caddy</span>
+              </div>
+              <a
+                href="https://alp65-brothers.ru"
+                target="_blank"
+                class="case-study__link"
+                >Посмотреть сайт вживую →</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What you get -->
+      <section class="webdev-section">
+        <div class="container">
+          <h2 class="section-title">Что вы получаете в результате</h2>
+          <div class="features-grid">
+            <article class="feature-card">
+              <h3>Скорость как приоритет</h3>
+              <p>
+                Медленный сайт теряет до 40% клиентов. Я оптимизирую каждый
+                байт: сжимаю изображения, минифицирую код, настраиваю
+                кэширование. Ваш сайт будет загружаться мгновенно.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>SEO-фундамент</h3>
+              <p>
+                Правильная семантическая вёрстка (h1-h6), мета-теги,
+                микроразметка Schema.org, sitemap.xml и robots.txt. Поисковики
+                (Яндекс, Google) будут понимать и любить ваш сайт с первого дня.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Mobile-First адаптив</h3>
+              <p>
+                Более 70% трафика идёт с мобильных. Я проектирую интерфейс
+                сначала для смартфона, а потом адаптирую под десктоп. Всё будет
+                удобно нажимать пальцем.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Безопасность и 152-ФЗ</h3>
+              <p>
+                Настраиваю HTTPS, защищаю формы от спама, добавляю чекбоксы
+                согласия и политику конфиденциальности. Ваш бизнес защищён от
+                штрафов Роскомнадзора.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section class="webdev-section section--alt">
+        <div class="container">
+          <h2 class="section-title">Технологии, которые я использую</h2>
+          <p class="section-subtitle">
+            Никаких тяжёлых CMS вроде WordPress, которые нужно постоянно
+            обновлять и которые часто взламывают. Только надёжный, современный
+            стек.
+          </p>
+          <div class="stack-showcase">
+            <div class="stack-item">
+              <h3>Frontend</h3>
+              <div class="stack-tags">
+                <span>HTML5 Semantic</span>
+                <span>CSS3 / SCSS</span>
+                <span>Vanilla JavaScript</span>
+                <span>Flexbox / Grid</span>
+              </div>
+            </div>
+            <div class="stack-item">
+              <h3>Backend & Server</h3>
+              <div class="stack-tags">
+                <span>Node.js / Python</span>
+                <span>Docker</span>
+                <span>Caddy / Nginx</span>
+                <span>Linux (VPS)</span>
+              </div>
+            </div>
+            <div class="stack-item">
+              <h3>Tools & Deploy</h3>
+              <div class="stack-tags">
+                <span>Git / GitHub</span>
+                <span>CI/CD Pipelines</span>
+                <span>Figma (Design)</span>
+                <span>Webpack / Vite</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="webdev-cta section--alt">
+        <div class="container">
+          <h2>Готовы начать проект?</h2>
+          <p>
+            Опишите вашу задачу, и я подготовлю для вас детальную смету с
+            прозрачной разбивкой по этапам в течение 24 часов.
+          </p>
+          <a href="/#contact" class="hero__cta">Обсудить проект</a>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
       <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <div class="header__logo">
+              <span class="header__logo-icon"></span>
+              IronStack
+            </div>
+            <p>
+              Инженерный подход к веб-разработке. Чистый код, архитектура,
+              результат.
+            </p>
+          </div>
+          <div class="footer__cols">
+            <div class="footer__col">
+              <h4>Компания</h4>
+              <a href="about.html">Обо мне</a>
+              <a href="pricing.html">Цены</a>
+              <a href="journal.html">Статьи</a>
+            </div>
+            <div class="footer__col">
+              <h4>Связь</h4>
+              <a href="mailto:hello@savinykh-tech.ru">hello@savinykh-tech.ru</a>
+              <a href="https://t.me/your_telegram_username" target="_blank"
+                >Telegram</a
+              >
+              <a href="https://web.max.ru/your_max_username" target="_blank"
+                >Max</a
+              >
+              <a href="https://github.com/your_github" target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
         <div class="footer__bottom">
-          <span>© 2026 IronStack</span>
+          <span>© 2026 IronStack · Самозанятый Савиных Р.А. · ИНН XXX</span>
+          <span>
+            <a href="privacy-policy.html">Политика конфиденциальности</a> ·
+            <a href="oferta.html">Оферта</a> ·
+            <a href="pd-consent.html">Согласие на обработку ПД</a>
+          </span>
         </div>
       </div>
     </footer>
 
     <script src="js/cosmos.js" defer></script>
+    <script src="js/cookie-banner.js" defer></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
