@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Обо мне — Роман Савиных | Независимый веб-разработчик</title>
+    <meta
+      name="description"
+      content="Роман Савиных — независимый веб-разработчик с Сахалина. Создаю сайты на чистом коде и автоматизирую бизнес-процессы. Без конструкторов и посредников."
+    />
+    <meta name="theme-color" content="#0A0A10" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://savinykh-tech.ru/about.html" />
+    <meta
+      property="og:title"
+      content="Роман Савиных — Независимый веб-разработчик"
+    />
+    <meta
+      property="og:description"
+      content="Инженерный подход к веб-разработке. Чистый код, архитектура, результат."
+    />
+    <meta property="og:image" content="https://savinykh-tech.ru/og.jpg" />
+    <meta property="og:site_name" content="IronStack" />
+
+    <!-- Schema.org: Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Савиных Роман Александрович",
+        "jobTitle": "Независимый веб-разработчик",
+        "url": "https://savinykh-tech.ru",
+        "telephone": "+79147436868",
+        "email": "hello@savinykh-tech.ru",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Южно-Сахалинск",
+          "addressCountry": "RU"
+        },
+        "knowsAbout": [
+          "Web Development",
+          "Automation",
+          "Python",
+          "JavaScript",
+          "Docker"
+        ]
+      }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/cosmos.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <!-- Общие компоненты -->
+    <link rel="stylesheet" href="css/about.css" />
+
+    <!-- Уникальные стили страницы -->
+  </head>
+  <body>
+    <canvas id="cosmos-canvas" aria-hidden="true"></canvas>
+
+    <header class="header">
+      <div class="container header__inner">
+        <a href="/" class="header__logo">
+          <span class="header__logo-icon"></span>
+          IronStack
+        </a>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__dropdown">
+              <a href="#" class="header__link">Услуги ▾</a>
+              <ul class="header__dropdown-menu">
+                <li>
+                  <a href="web-dev.html" class="header__dropdown-link"
+                    >Сайты под ключ</a
+                  >
+                </li>
+                <li>
+                  <a href="automation.html" class="header__dropdown-link"
+                    >Автоматизация бизнеса</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="about.html" class="header__link header__link--active"
+                >Обо мне</a
+              >
+            </li>
+            <li><a href="/#works" class="header__link">Работы</a></li>
+            <li><a href="journal.html" class="header__link">Статьи</a></li>
+            <li><a href="pricing.html" class="header__link">Цены</a></li>
+            <li><a href="/#contact" class="header__link">Контакты</a></li>
+          </ul>
+          <a href="/#contact" class="header__cta">Обсудить проект</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="about-page">
+      <!-- Hero About -->
+      <section class="container about-hero">
+        <div class="about-hero__grid">
+          <div class="about-hero__photo">
+            <img src="images/about.jpg" alt="Роман Савиных — веб-разработчик" />
+          </div>
+          <div class="about-hero__content">
+            <h1>Роман Савиных</h1>
+            <p class="about-hero__role">
+              Независимый веб-разработчик и инженер по автоматизации
+            </p>
+            <p class="about-hero__text">
+              Я не студия из 20 человек с менеджером-посредником. Я — инженер,
+              который пишет чистый код, проектирует архитектуру и доводит
+              проекты до результата. Моя цель — не просто «сделать сайт», а
+              создать инструмент, который экономит ваше время и приносит деньги.
+            </p>
+            <div class="about-hero__actions">
+              <a href="/#contact" class="hero__cta">Обсудить задачу</a>
+              <a href="/#works" class="about-hero__link">Смотреть проекты →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Principles -->
+      <section class="container about-section section--alt">
+        <h2 class="about-section__title">Мои принципы работы</h2>
+        <div class="focus-grid about-principles">
+          <article class="focus-card">
+            <span class="focus-card__icon">✦</span>
+            <h3>Прямой контакт</h3>
+            <p>
+              Вы общаетесь напрямую со мной. Никаких «испорченных телефонов»
+              через менеджеров. Я погружаюсь в ваш бизнес и отвечаю за результат
+              лично.
+            </p>
+          </article>
+          <article class="focus-card">
+            <span class="focus-card__icon">✦</span>
+            <h3>Вы владеете результатом</h3>
+            <p>
+              Домен, хостинг, исходный код и базы данных — ваши. Я не сажаю
+              клиентов на «иглу» абонентской платы за базовые вещи. Полная
+              прозрачность.
+            </p>
+          </article>
+          <article class="focus-card">
+            <span class="focus-card__icon">✦</span>
+            <h3>Юридическая чистота</h3>
+            <p>
+              Работаю официально как самозанятый (НПД). Предоставляю чеки из
+              «Мой налог». Соблюдаю 152-ФЗ: серверы в РФ, политика
+              конфиденциальности, защита данных.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Stack -->
+      <section class="container about-section">
+        <h2 class="about-section__title">Технологический стек</h2>
+        <p class="about-section__subtitle">
+          Я не использую конструкторы (Tilda, Wix) или тяжёлые CMS (WordPress),
+          если в них нет реальной необходимости. Мой выбор — производительность,
+          безопасность и масштабируемость.
+        </p>
+        <div class="stack-grid">
+          <div class="stack-category">
+            <h3>Фронтенд</h3>
+            <div class="stack-tags">
+              <span>HTML5</span><span>CSS3 / SCSS</span
+              ><span>Vanilla JavaScript</span><span>Адаптивная вёрстка</span>
+            </div>
+          </div>
+          <div class="stack-category">
+            <h3>Бэкенд и автоматизация</h3>
+            <div class="stack-tags">
+              <span>Python</span><span>Telegram Bot API</span
+              ><span>Парсинг данных</span><span>n8n (автоматизация)</span>
+            </div>
+          </div>
+          <div class="stack-category">
+            <h3>Инфраструктура</h3>
+            <div class="stack-tags">
+              <span>Docker</span><span>Caddy / Nginx</span
+              ><span>Linux (VPS в РФ)</span><span>Git</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="container about-cta section--alt">
+        <h2>Готовы обсудить проект?</h2>
+        <p>
+          Расскажите о вашей задаче, и я предложу оптимальное техническое
+          решение без навязывания лишних услуг.
+        </p>
+        <a href="/#contact" class="hero__cta">Написать мне</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <div class="header__logo">
+              <span class="header__logo-icon"></span>
+              IronStack
+            </div>
+            <p>
+              Инженерный подход к веб-разработке. Чистый код, архитектура,
+              результат.
+            </p>
+          </div>
+          <div class="footer__cols">
+            <div class="footer__col">
+              <h4>Компания</h4>
+              <a href="about.html">Обо мне</a>
+              <a href="pricing.html">Цены</a>
+              <a href="journal.html">Статьи</a>
+            </div>
+            <div class="footer__col">
+              <h4>Связь</h4>
+              <a href="mailto:hello@savinykh-tech.ru">hello@savinykh-tech.ru</a>
+              <a href="https://t.me/your_telegram_username" target="_blank"
+                >Telegram</a
+              >
+              <a href="https://web.max.ru/your_max_username" target="_blank"
+                >Max</a
+              >
+              <a href="https://github.com/your_github" target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 IronStack · Самозанятый Савиных Р.А. · ИНН XXX</span>
+          <span>
+            <a href="privacy-policy.html">Политика конфиденциальности</a> ·
+            <a href="oferta.html">Оферта</a> ·
+            <a href="pd-consent.html">Согласие на обработку ПД</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/cosmos.js" defer></script>
+    <script src="js/cookie-banner.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

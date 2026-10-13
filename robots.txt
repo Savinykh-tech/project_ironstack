@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Запрещаем индексацию служебных папок (если они появятся)
+Disallow: /css/
+Disallow: /js/
+Disallow: /images/
+
+# Указываем путь к карте сайта
+Sitemap: https://savinykh-tech.ru/sitemap.xml
