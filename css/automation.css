@@ -83,7 +83,184 @@
     margin: 0 auto 60px;
 }
 
-/* Case Hero */
+/* ===== НОВЫЕ СТИЛИ ДЛЯ КЕЙСА (вместо старого .case-hero) ===== */
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-tag {
+    font: 600 12px/1 var(--font-sans);
+    color: var(--text-secondary);
+    /* было var(--accent-3) */
+    background: rgba(255, 255, 255, 0.05);
+    /* было rgba(56, 224, 208, 0.1) */
+    padding: 6px 12px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: inline-block;
+    margin-bottom: 16px;
+    border: 1px solid var(--border-color);
+    /* было rgba(56, 224, 208, 0.2) */
+}
+
+/* Case Study Grid */
+.case-study__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.case-block {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.case-block::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--gradient-main);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.case-block:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.case-block:hover::after {
+    width: 100%;
+}
+
+.case-block--highlight {
+    border-color: rgba(124, 140, 255, 0.3);
+    background: rgba(124, 140, 255, 0.03);
+}
+
+.case-block--highlight:hover {
+    border-color: rgba(124, 140, 255, 0.5);
+}
+
+.case-block h3 {
+    font: 600 20px/1.3 var(--font-sans);
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.case-block p {
+    font: 400 15px/1.7 var(--font-sans);
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.feature-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.feature-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--gradient-main);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.feature-card:hover::after {
+    width: 100%;
+}
+
+.feature-card h3 {
+    font: 600 20px/1.3 var(--font-sans);
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    font: 400 15px/1.6 var(--font-sans);
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Case Study Footer */
+.case-study__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border-color);
+    margin-top: 40px;
+}
+
+.case-study__stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.case-study__stack span {
+    font: 500 12px/1 var(--font-mono);
+    color: var(--text-dim);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.case-study__link {
+    font: 600 16px/1 var(--font-sans);
+    color: var(--accent-2);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.case-study__link:hover {
+    color: var(--accent-1);
+}
+
+/* ===== СТАРЫЕ СТИЛИ (сохранены как были) ===== */
+
+/* Case Hero (старый, оставлен для совместимости) */
 .case-hero {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
@@ -415,6 +592,16 @@
     .automation-hero__stats {
         gap: 32px;
     }
+
+    .case-study__grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study__footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 @media (max-width: 640px) {
@@ -442,5 +629,10 @@
 
     .process-timeline::before {
         left: 5px;
+    }
+
+    .case-block,
+    .feature-card {
+        padding: 24px;
     }
 }

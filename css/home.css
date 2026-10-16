@@ -457,7 +457,7 @@
 }
 
 .pricing__link {
-    font: 600 16px / 1 var(--font-sans);
+    font: 600 18px / 1 var(--font-sans);
     color: var(--accent-2);
     text-decoration: underline;
     text-underline-offset: 4px;
@@ -955,6 +955,16 @@
 .form-group label[for="contact"]::after {
     content: ' *';
     color: var(--accent-2);
+}
+
+/* Honeypot — скрытое поле для защиты от спама */
+.form-honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
 }
 
 /* ===== COOKIE BANNER ===== */

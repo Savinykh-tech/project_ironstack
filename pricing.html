@@ -9,6 +9,7 @@
       content="Честные цены на разработку сайтов. Сравнение со студиями и фрилансом. Прозрачные условия, договор, чистый код."
     />
     <meta name="theme-color" content="#0A0A10" />
+    <link rel="canonical" href="https://savinykh-tech.ru/pricing.html" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://savinykh-tech.ru/pricing.html" />
@@ -29,7 +30,6 @@
     <link rel="stylesheet" href="css/cosmos.css" />
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/pricing.css" />
-
   </head>
   <body>
     <canvas id="cosmos-canvas" aria-hidden="true"></canvas>
@@ -58,7 +58,7 @@
               </ul>
             </li>
             <li><a href="about.html" class="header__link">Обо мне</a></li>
-          
+
             <li><a href="journal.html" class="header__link">Статьи</a></li>
             <li>
               <a href="pricing.html" class="header__link header__link--active"
@@ -76,6 +76,7 @@
       <!-- Hero -->
       <section class="pricing-hero">
         <div class="container">
+          <span class="section-tag">Прозрачное ценообразование</span>
           <h1>Честная математика веб-разработки</h1>
           <p class="pricing-hero__text">
             Я не верю в «сайты за 3000 рублей» и не раздуваю сметы, чтобы
@@ -86,7 +87,7 @@
       </section>
 
       <!-- Comparison Table -->
-      <section class="pricing-section">
+      <section class="pricing-section section--alt">
         <div class="container">
           <h2 class="section-title">Сравнение подходов</h2>
           <div class="comparison-table-wrapper">
@@ -137,26 +138,29 @@
       </section>
 
       <!-- Why Cheaper -->
-      <section class="pricing-section section--alt">
+      <section class="pricing-section">
         <div class="container">
           <h2 class="section-title">Почему у меня дешевле, чем в студии?</h2>
           <div class="reasons-grid">
-            <div class="reason-card">
-              <h3>🚫 Нет раздутого штата</h3>
+            <div class="feature-card">
+              <span class="feature-card__icon">🚫</span>
+              <h3>Нет раздутого штата</h3>
               <p>
                 Вы не платите за зарплату менеджера, бухгалтера, директора и
-                аренду офиса в центре. Вы платите только за мои руки и голову.
+                аренду офиса. Вы платите только за мои руки и голову.
               </p>
             </div>
-            <div class="reason-card">
-              <h3>⚡ Прямая связь</h3>
+            <div class="feature-card">
+              <span class="feature-card__icon">⚡</span>
+              <h3>Прямая связь</h3>
               <p>
                 Никаких «испорченных телефонов». Вы ставите задачу мне, я её
-                выполняю. Это ускоряет работу в 2 раза и исключает ошибки в ТЗ.
+                выполняю. Это ускоряет работу в 2 раза и исключает ошибки.
               </p>
             </div>
-            <div class="reason-card">
-              <h3>💻 Чистый код, а не конструктор</h3>
+            <div class="feature-card">
+              <span class="feature-card__icon">💻</span>
+              <h3>Чистый код, а не конструктор</h3>
               <p>
                 Я не собираю сайты на Tilda, за которые потом нужно платить
                 ежемесячную подписку. Вы получаете независимый, быстрый продукт.
@@ -167,41 +171,44 @@
       </section>
 
       <!-- What you pay for (Value) -->
-      <section class="pricing-section">
+      <section class="pricing-section section--alt">
         <div class="container">
           <h2 class="section-title">За что вы платите на самом деле</h2>
           <div class="value-grid">
-            <article class="value-card">
+            <article class="feature-card">
+              <span class="feature-card__icon">🧹</span>
               <h3>Чистый и понятный код</h3>
               <p>
                 Если в будущем вы захотите передать сайт другому разработчику,
-                он не будет проклинать предыдущего автора. Код структурирован,
-                прокомментирован и готов к масштабированию.
+                он не будет проклинать предыдущего автора. Код структурирован и
+                готов к масштабированию.
               </p>
             </article>
-            <article class="value-card">
+            <article class="feature-card">
+              <span class="feature-card__icon">🔍</span>
               <h3>Честное базовое SEO</h3>
               <p>
                 Правильная семантика, мета-теги, скорость загрузки и
                 микроразметка. За это студии часто берут отдельные большие
-                деньги или «накручивают» услуги. У меня это включено в
-                стоимость.
+                деньги. У меня это включено в стоимость.
               </p>
             </article>
-            <article class="value-card">
+            <article class="feature-card">
+              <span class="feature-card__icon">🖥️</span>
               <h3>Работа на вашем хостинге</h3>
               <p>
-                Домен, бэкенд, подключение форм в Telegram/Max — всё под ключ. Я
-                настрою всё так, чтобы работало даже на самом дешевом
-                shared-хостинге, без принуждения к покупке дорогого VPS.
+                Домен, бэкенд, подключение форм — всё под ключ. Я настрою всё
+                так, чтобы работало даже на самом дешевом shared-хостинге, без
+                принуждения к покупке дорогого VPS.
               </p>
             </article>
-            <article class="value-card">
+            <article class="feature-card">
+              <span class="feature-card__icon">🛡️</span>
               <h3>Юридическая безопасность</h3>
               <p>
-                Я не просто делаю сайт, я помогаю сделать его законным. Помогу
-                оформить заявление в Роскомнадзор, предусматриваю 152-ФЗ,
-                чекбоксы согласия и политику конфиденциальности.
+                Я помогаю сделать сайт законным. Предусматриваю 152-ФЗ, чекбоксы
+                согласия и политику конфиденциальности, чтобы к вам не было
+                вопросов.
               </p>
             </article>
           </div>
@@ -209,42 +216,40 @@
       </section>
 
       <!-- Principles & Guarantees -->
-      <section class="pricing-section section--alt">
+      <section class="pricing-section">
         <div class="container">
           <h2 class="section-title">Мои принципы и гарантии</h2>
           <div class="principles-grid">
             <article class="principle-card">
+              <h3>Вы владеете результатом</h3>
               <p>
-                Вы платите за разработку сайта один раз. Исходный код, домен и
-                хостинг оформляются на вас. Платить нужно только за продление
-                домена и хостинга (~2000-3000 ₽ в год) напрямую регистратору.
-                При желании могу оформить всё на своих надежных VPS и вести
-                полное обслуживание сайта/продукта за отдельную абонентскую
-                плату.
+                Вы платите за разработку один раз. Исходный код, домен и хостинг
+                оформляются на вас. Платить нужно только за продление выбранного
+                вами домена и хостинга напрямую регистратору.
               </p>
             </article>
             <article class="principle-card">
+              <h3>Официальная работа</h3>
               <p>
                 Я зарегистрирован как самозанятый (НПД). Мы заключаем договор, я
                 предоставляю чеки из приложения «Мой налог», которые являются
-                официальным подтверждением расходов для любых юридических лиц.
+                официальным подтверждением расходов для юр. лиц.
               </p>
             </article>
             <article class="principle-card">
+              <h3>14 дней бесплатной поддержки</h3>
               <p>
-                В течение 14 дней после сдачи я бесплатно исправляю любые баги
-                или мелкие недочёты. Дальнейшие доработки или новый функционал
-                обсуждаются отдельно и оцениваются по часам или фиксированной
-                сумме.
+                После сдачи я бесплатно исправляю любые баги или мелкие
+                недочёты. Дальнейшие доработки обсуждаются отдельно и
+                оцениваются по часам или фиксированной сумме.
               </p>
             </article>
             <article class="principle-card">
+              <h3>Оплата за результат</h3>
               <p>
-                Я дорожу своей репутацией и ответственно отношусь к делу. Я не
-                брошу начатый проект на половине пути и обязательно доведу его
-                до конца. Для вашего спокойствия, полная оплата будет
-                произведена после окончательного запуска проекта согласно
-                договору.
+                Я дорожу репутацией и не брошу начатый проект. Для вашего
+                спокойствия, основная часть оплаты производится после
+                окончательного запуска проекта согласно договору.
               </p>
             </article>
           </div>
@@ -252,14 +257,14 @@
       </section>
 
       <!-- Process -->
-      <section class="pricing-section">
+      <section class="pricing-section section--alt">
         <div class="container">
           <h2 class="section-title">Как всё проходит</h2>
           <div class="process-timeline">
             <div class="process-step">
               <div class="process-step__dot"></div>
               <div class="process-step__content">
-                <h3>Уточнение деталей</h3>
+                <h3>1. Уточнение деталей</h3>
                 <p>
                   Созваниваемся или переписываемся. Я задаю правильные вопросы,
                   чтобы понять реальную задачу бизнеса, а не просто «хочу
@@ -270,7 +275,7 @@
             <div class="process-step">
               <div class="process-step__dot"></div>
               <div class="process-step__content">
-                <h3>Бесплатный прототип и смета</h3>
+                <h3>2. Бесплатный прототип и смета</h3>
                 <p>
                   В течение 24 часов я делаю прототип главной страницы и
                   фиксирую точную смету. Никаких предоплат на этом этапе.
@@ -280,32 +285,31 @@
             <div class="process-step">
               <div class="process-step__dot"></div>
               <div class="process-step__content">
-                <h3>Разработка и промежуточный показ</h3>
+                <h3>3. Разработка и промежуточный показ</h3>
                 <p>
                   Я выкладываю проект на тестовый сервер. Когда готовность
-                  достигает ~70% (или завершена основная верстка), мы вносим
-                  финальные правки, и вы вносите предоплату 40%.
+                  достигает ~70%, мы вносим финальные правки, и вы вносите
+                  предоплату 40%.
                 </p>
               </div>
             </div>
             <div class="process-step">
               <div class="process-step__dot"></div>
               <div class="process-step__content">
-                <h3>Деплой и запуск</h3>
+                <h3>4. Деплой и запуск</h3>
                 <p>
                   Переносим сайт на ваш сервер, подключаем домен, формы и
-                  аналитику. Всё работает как по договору.
+                  аналитику. Всё работает строго как в договоре.
                 </p>
               </div>
             </div>
             <div class="process-step">
               <div class="process-step__dot"></div>
               <div class="process-step__content">
-                <h3>Полная оплата и поддержка</h3>
+                <h3>5. Полная оплата и передача</h3>
                 <p>
                   Вы оплачиваете остаток суммы. Я передаю все доступы. Первые 2
-                  недели — бесплатная оперативная правка багов (реакция в
-                  течение суток).
+                  недели — бесплатная оперативная правка багов.
                 </p>
               </div>
             </div>
@@ -314,7 +318,7 @@
       </section>
 
       <!-- Final CTA -->
-      <section class="pricing-cta section--alt">
+      <section class="pricing-cta">
         <div class="container">
           <h2>Готовы обсудить вашу задачу?</h2>
           <p>
@@ -327,47 +331,158 @@
     </main>
 
     <footer class="footer">
+      <!-- Градиентная линия сверху -->
+      <div class="footer__accent-line"></div>
+
       <div class="container">
         <div class="footer__grid">
+          <!-- Колонка 1: Логотип, описание, часы -->
           <div class="footer__brand">
-            <div class="header__logo">
-              <span class="header__logo-icon"></span>
+            <a href="/" class="footer__logo">
+              <span class="footer__logo-icon"></span>
               IronStack
-            </div>
-            <p>
-              Инженерный подход к веб-разработке. Чистый код, архитектура,
-              результат.
+            </a>
+            <p class="footer__tagline">
+              Инженерный подход к веб-разработке.<br />
+              Чистый код, архитектура, результат.
             </p>
+
+            <div class="footer__location">
+              <div class="footer__location-info">
+                <span class="footer__location-city">Южно-Сахалинск</span>
+                <span class="footer__location-time" id="sakhalin-time"
+                  >--:--</span
+                >
+                <span class="footer__location-tz">UTC+11</span>
+              </div>
+            </div>
           </div>
-          <div class="footer__cols">
-            <div class="footer__col">
-              <h4>Компания</h4>
-              <a href="about.html">Обо мне</a>
-              <a href="pricing.html">Цены</a>
-              <a href="journal.html">Статьи</a>
-            </div>
-            <div class="footer__col">
-              <h4>Связь</h4>
-              <a href="mailto:hello@savinykh-tech.ru">hello@savinykh-tech.ru</a>
-              <a href="https://t.me/your_telegram_username" target="_blank"
-                >Telegram</a
-              >
-              <a href="https://web.max.ru/your_max_username" target="_blank"
-                >Max</a
-              >
-              <a href="https://github.com/your_github" target="_blank"
-                >GitHub</a
-              >
-            </div>
+
+          <!-- Колонка 2: Навигация -->
+          <div class="footer__column">
+            <h4 class="footer__column-title">Навигация</h4>
+            <ul class="footer__list">
+              <li><a href="about.html" class="footer__link">Обо мне</a></li>
+              <li><a href="pricing.html" class="footer__link">Цены</a></li>
+              <li><a href="journal.html" class="footer__link">Статьи</a></li>
+            </ul>
+          </div>
+
+          <!-- Колонка 3: Связь -->
+          <div class="footer__column">
+            <h4 class="footer__column-title">Связь</h4>
+            <ul class="footer__list">
+              <li>
+                <a
+                  href="mailto:ironstack@savinykh-tech.ru"
+                  class="footer__link footer__link--icon"
+                >
+                  <svg
+                    class="footer__link-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    ></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  ironstack@savinykh-tech.ru
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://t.me/Sav_Roman"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="footer__link footer__link--icon"
+                >
+                  <svg
+                    class="footer__link-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.94z"
+                    />
+                  </svg>
+                  Telegram
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://web.max.ru"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="footer__link footer__link--icon"
+                >
+                  <svg
+                    class="footer__link-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                    ></path>
+                  </svg>
+                  Max
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/твой_ник"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="footer__link footer__link--icon"
+                >
+                  <svg
+                    class="footer__link-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                    />
+                  </svg>
+                  GitHub
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
+
+        <!-- Разделитель -->
+        <div class="footer__divider"></div>
+
+        <!-- Нижняя строка: Копирайт и юридические ссылки -->
         <div class="footer__bottom">
-          <span>© 2026 IronStack · Самозанятый Савиных Р.А. · ИНН XXX</span>
-          <span>
-            <a href="privacy-policy.html">Политика конфиденциальности</a> ·
-            <a href="oferta.html">Оферта</a> ·
-            <a href="pd-consent.html">Согласие на обработку ПД</a>
-          </span>
+          <div class="footer__copyright">
+            © 2026 IronStack · Самозанятый Савиных Роман Александрович · ИНН
+            650402286728 · г. Южно-Сахалинск
+          </div>
+          <div class="footer__legal">
+            <a href="privacy-policy.html" class="footer__legal-link"
+              >Политика конфиденциальности</a
+            >
+            <span class="footer__separator">·</span>
+            <a href="oferta.html" class="footer__legal-link">Оферта</a>
+            <span class="footer__separator">·</span>
+            <a href="pd-consent.html" class="footer__legal-link"
+              >Согласие на обработку ПД</a
+            >
+          </div>
         </div>
       </div>
     </footer>
@@ -375,5 +490,6 @@
     <script src="js/cosmos.js" defer></script>
     <script src="js/cookie-banner.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="js/footer.js" defer></script>
   </body>
 </html>

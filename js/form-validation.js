@@ -1,14 +1,15 @@
 (function () {
   "use strict";
 
+  // 1. ЗАПОМИНАЕМ ВРЕМЯ ЗАГРУЗКИ СТРАНИЦЫ СРАЗУ (вне обработчиков)
+  sessionStorage.setItem('pageLoadTime', Date.now().toString());
+
   const form = document.getElementById("contact-form");
   if (!form) return;
 
   // Регулярки для проверки
   const patterns = {
-    // Email: стандартная проверка
     email: /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/,
-    // Телефон РФ: +7 или 8, затем 10 цифр, допускаются пробелы, скобки, дефисы
     phone: /^(\+7|8)[\s\-]?\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/
   };
 
@@ -31,16 +32,12 @@
   function validateContact(value) {
     const trimmed = value.trim();
     if (!trimmed) return "Укажите email или телефон";
-    
-    // Пробуем email
     if (patterns.email.test(trimmed)) return null;
     
-    // Пробуем телефон (очищаем от форматирования для проверки)
     const digitsOnly = trimmed.replace(/\D/g, "");
     if (digitsOnly.length === 11 && (digitsOnly.startsWith("7") || digitsOnly.startsWith("8"))) {
       return null;
     }
-    
     return "Введите корректный email (mail@example.com) или телефон (+7 999 000-00-00)";
   }
 
@@ -48,7 +45,6 @@
     const trimmed = value.trim();
     if (!trimmed) return "Укажите ваше имя";
     if (trimmed.length < 2) return "Имя должно содержать минимум 2 символа";
-    // Запрет чисто цифровых имен
     if (/^\d+$/.test(trimmed)) return "Имя не может состоять только из цифр";
     return null;
   }
@@ -58,7 +54,29 @@
     return null;
   }
 
-  // Валидация при потере фокуса (для удобства пользователя)
+  // 2. ФУНКЦИЯ ПРОВЕРКИ НА СПАМ (вынесена отдельно)
+  function isSpam(currentForm) {
+    // Honeypot проверка
+    const honeypot = currentForm.querySelector('input[name="website"]');
+    if (honeypot && honeypot.value.trim() !== '') {
+      console.warn('🤖 Обнаружен бот: заполнено honeypot поле');
+      return true; 
+    }
+
+    // Time-based проверка
+    const formSubmitTime = Date.now();
+    const pageLoadTime = parseInt(sessionStorage.getItem('pageLoadTime')) || formSubmitTime;
+    const timeToFill = (formSubmitTime - pageLoadTime) / 1000; 
+    
+    if (timeToFill < 3) {
+      console.warn(`🤖 Обнаружен бот: форма заполнена за ${timeToFill.toFixed(1)} секунд`);
+      return true; 
+    }
+
+    return false; 
+  }
+
+  // Валидация при потере фокуса
   const contactInput = document.getElementById("contact");
   const nameInput = document.getElementById("name");
 
@@ -152,16 +170,23 @@
     }
 
     if (!isValid) {
-      // Прокрутка к первой ошибке
       const firstError = form.querySelector(".form-error.visible");
       if (firstError) {
         firstError.scrollIntoView({ behavior: "smooth", block: "center" });
       }
-      return;
+      return; // Останавливаем выполнение, если есть ошибки валидации
     }
 
-    // Здесь будет отправка на бэкенд (n8n webhook)
-    // Пока — заглушка
+    // 3. ПРОВЕРКА НА СПАМ (вызываем функцию ПЕРЕД отправкой)
+    if (isSpam(form)) {
+      // Ботам показываем успешную отправку, чтобы они "успокоились", 
+      // но на самом деле мы ничего не отправляем (форма просто сбрасывается)
+      console.log("Спам-атака заблокирована.");
+      form.reset();
+      return; 
+    }
+
+    // 4. Если всё ок (и не спам), отправляем
     alert("Заявка отправлена! (Это демо-режим, бэкенд подключим позже)");
     form.reset();
   });

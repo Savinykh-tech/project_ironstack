@@ -1,10 +1,9 @@
 User-agent: *
 Allow: /
 
-# Запрещаем индексацию служебных папок (если они появятся)
-Disallow: /css/
-Disallow: /js/
-Disallow: /images/
+# Разрешаем доступ ко всему, кроме системных файлов
+Disallow: /*.json$
+Disallow: /*.md$
 
 # Указываем путь к карте сайта
 Sitemap: https://savinykh-tech.ru/sitemap.xml

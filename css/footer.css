@@ -1,63 +1,410 @@
+/* ============================================
+   ФУТЕР — единый блок, без дублей
+   ============================================ */
 .footer {
+    background: var(--bg-base);
+    padding: 60px 0 30px;
+    position: relative;
+    margin-top: 80px;
     border-top: 1px solid var(--border-color);
-    padding: 64px 0 32px;
-    margin-top: auto;
+}
+
+.footer__accent-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gradient-main);
+    opacity: 0.3;
 }
 
 .footer__grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    margin-bottom: 40px;
+    align-items: end;
+    /* Выравнивание по нижнему краю */
 }
 
-.footer__brand p {
-    color: var(--text-secondary);
-    font-size: 14px;
-    margin-top: 16px;
-    max-width: 320px;
-    line-height: 1.6;
+.footer__brand {
+    max-width: 400px;
 }
 
-.footer__cols {
-    display: flex;
-    gap: clamp(40px, 6vw, 80px);
-    flex-wrap: wrap;
-}
-
-.footer__col h4 {
-    font: 600 12px/1 var(--font-mono);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-    margin-bottom: 20px;
-}
-
-.footer__col a {
-    display: block;
-    color: var(--text-secondary);
-    font-size: 15px;
-    margin-bottom: 14px;
-    transition: color 0.2s;
-}
-
-.footer__col a:hover {
+.footer__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font: 700 20px/1 var(--font-sans);
     color: var(--text-primary);
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.footer__logo-icon {
+    width: 24px;
+    height: 24px;
+    background: var(--gradient-main);
+    border-radius: 6px;
+}
+
+.footer__tagline {
+    font: 400 14px/1.6 var(--font-sans);
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.footer__links {
+    display: flex;
+    gap: 60px;
+}
+
+.footer__column-title {
+    font: 600 13px/1 var(--font-sans);
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__link {
+    font: 400 15px/1 var(--font-sans);
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+    color: var(--text-primary);
+}
+
+.footer__divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 30px 0;
 }
 
 .footer__bottom {
     display: flex;
     justify-content: space-between;
-    gap: 16px;
+    align-items: center;
     flex-wrap: wrap;
-    margin-top: 48px;
-    padding-top: 24px;
-    border-top: 1px solid var(--border-color);
-    font: 500 13px/1.5 var(--font-mono);
+    gap: 20px;
+}
+
+.footer__copyright {
+    font: 400 13px/1.5 var(--font-mono);
     color: var(--text-dim);
 }
 
-.footer__bottom b {
+.footer__legal {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.footer__legal-link {
+    font: 400 13px/1 var(--font-sans);
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer__legal-link:hover {
     color: var(--text-secondary);
+}
+
+.footer__separator {
+    color: var(--text-dim);
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer__links {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer__legal {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .footer__separator {
+        display: none;
+    }
+}
+
+
+
+/* ============================================
+   КОСМИЧЕСКИЕ ЧАСЫ И ИКОНКИ В ФУТЕРЕ
+   ============================================ */
+
+/* Часы с неоновым свечением */
+/* Локация и время — в одну линию, прижато к низу */
+/* ============================================
+   ФУТЕР — ФИНАЛЬНАЯ ВЕРСИЯ
+   ============================================ */
+
+.footer {
+    background: var(--bg-base);
+    padding: 60px 0 30px;
+    position: relative;
+    margin-top: 80px;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer__accent-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gradient-main);
+    opacity: 0.3;
+}
+
+/* ТРИ КОЛОНКИ: Лого + Навигация + Связь */
+.footer__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+    align-items: start;
+    /* Выравнивание по верху */
+}
+
+.footer__brand {
+    max-width: 400px;
+}
+
+.footer__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font: 700 20px/1 var(--font-sans);
+    color: var(--text-primary);
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.footer__logo-icon {
+    width: 24px;
+    height: 24px;
+    background: var(--gradient-main);
+    border-radius: 6px;
+}
+
+.footer__tagline {
+    font: 400 14px/1.6 var(--font-sans);
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Колонки навигации и связи */
+.footer__column-title {
+    font: 600 12px/1 var(--font-sans);
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__link {
+    font: 400 15px/1 var(--font-sans);
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+    color: var(--text-primary);
+}
+
+/* Иконки в ссылках */
+.footer__link--icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer__link-icon {
+    color: var(--text-dim);
+    flex-shrink: 0;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer__link--icon:hover .footer__link-icon {
+    color: var(--accent-1);
+    transform: translateX(3px);
+}
+
+.footer__link--icon:hover {
+    color: var(--text-primary);
+}
+
+/* Часы — приглушённые, не перетягивают внимание */
+.footer__location {
+    margin-top: 24px;
+}
+
+.footer__location-info {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.footer__location-city {
+    font: 400 13px/1 var(--font-sans);
+    color: var(--text-dim);
+}
+
+.footer__location-time {
+    font: 600 16px/1 var(--font-mono);
+    color: var(--text-secondary);
+    /* Приглушённый серый вместо градиента */
+    letter-spacing: 0.5px;
+}
+
+.footer__location-tz {
+    font: 400 11px/1 var(--font-mono);
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Разделитель */
+.footer__divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 30px 0;
+}
+
+/* Нижняя строка */
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer__copyright {
+    font: 400 13px/1.5 var(--font-mono);
+    color: var(--text-dim);
+}
+
+.footer__legal {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.footer__legal-link {
+    font: 400 13px/1 var(--font-sans);
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer__legal-link:hover {
+    color: var(--text-secondary);
+}
+
+.footer__separator {
+    color: var(--text-dim);
+    opacity: 0.5;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer__legal {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .footer__separator {
+        display: none;
+    }
+}
+
+
+
+
+/* Выравнивание иконок в ссылках */
+.footer__link--icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Базовый стиль иконки */
+.footer__link-icon {
+    color: var(--text-dim);
+    flex-shrink: 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Эффект при наведении на ссылку: иконка загорается и сдвигается */
+.footer__link--icon:hover .footer__link-icon {
+    color: #A78BFA;
+    transform: translateX(3px);
+}
+
+/* При наведении на саму ссылку текст тоже становится ярче */
+.footer__link--icon:hover {
+    color: var(--text-primary);
 }
